@@ -1,0 +1,15 @@
+public class Demo2 implements Runnable{//线程1
+	public void run(){  //实现run方法
+		for(int i=1;i<10;i++){
+			System.out.print(i+" ");		
+		}
+	}
+	public static void main(String[] args) {
+		Demo2 d1=new Demo2();//线程对象
+		Thread t1=new Thread(d1);
+		t1.start();
+		Demo2 d2=new Demo2();
+		Thread t2=new Thread(d2);
+		t2.start();
+	}
+}
